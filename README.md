@@ -24,6 +24,9 @@ Once the application is running, you can navigate through the screens to view cu
 
 ## Packages Used
 **firebase_core:** To initialize Firebase services in the application.
+
 **firebase_auth:** For user authentication using Firebase Authentication.
+
 **http:** To make HTTP requests to the Pexels API for fetching curated photos.
+
 **provider:** For state management and providing access to data across the application.
