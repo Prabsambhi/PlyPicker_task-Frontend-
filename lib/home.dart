@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'dart:convert';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:imagefrontend/imageprovider.dart';
@@ -15,6 +16,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<String> photoUrls = [];
+
+  signOut() async {
+    await FirebaseAuth.instance.signOut();
+  }
 
   @override
   void initState() {
@@ -95,6 +100,10 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (() => signOut()),
+        child: const Icon(Icons.logout),
       ),
     );
   }
