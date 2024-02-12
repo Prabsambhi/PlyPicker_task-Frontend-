@@ -3,6 +3,8 @@ import 'package:imagefrontend/imageprovider.dart';
 import 'package:provider/provider.dart';
 
 class SavedImagesScreen extends StatelessWidget {
+  const SavedImagesScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final savedImagesProvider = Provider.of<SavedImagesProvider>(context);
@@ -10,10 +12,10 @@ class SavedImagesScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Saved Images'),
+        title: const Text('Saved Images'),
       ),
       body: savedImages.isEmpty
-          ? Center(child: Text('No saved images'))
+          ? const Center(child: Text('No saved images'))
           : ListView.builder(
               itemCount: savedImages.length,
               itemBuilder: (BuildContext context, int index) {
@@ -23,7 +25,7 @@ class SavedImagesScreen extends StatelessWidget {
                   child: ListTile(
                     leading: Image.network(imageUrl),
                     trailing: IconButton(
-                      icon: Icon(Icons.delete),
+                      icon: const Icon(Icons.delete),
                       onPressed: () {
                         savedImagesProvider.removeImage(imageUrl);
                       },

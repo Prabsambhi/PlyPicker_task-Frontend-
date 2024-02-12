@@ -15,7 +15,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => SavedImagesProvider()),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
@@ -29,10 +29,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.indigo),
       debugShowCheckedModeBanner: false,
       title: 'Babynama',
-      home: Wrapper(),
+      home: const Wrapper(),
       routes: {
-        '/login': (context) => LoginScreen(),
-        '/signup': (context) => SignUpPage(),
+        '/login': (context) => const LoginScreen(),
+        '/signup': (context) => const SignUpPage(),
         '/savedimage': (context) => SavedImagesScreen(),
       },
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:imagefrontend/imagesclass.dart';
 
 class SavedImagesProvider extends ChangeNotifier {
-  List<ImageItem> _savedImages = [];
+  final List<ImageItem> _savedImages = [];
 
   List<ImageItem> get savedImages => _savedImages;
 
