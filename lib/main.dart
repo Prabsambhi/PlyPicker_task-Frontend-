@@ -1,10 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:imagefrontend/home.dart';
 import 'package:imagefrontend/imageprovider.dart';
 import 'package:imagefrontend/login.dart';
 import 'package:imagefrontend/savedimage.dart';
 import 'package:imagefrontend/signup.dart';
+import 'package:imagefrontend/wrapper.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.indigo),
       debugShowCheckedModeBanner: false,
       title: 'Babynama',
-      home: HomeScreen(),
+      home: Wrapper(),
       routes: {
         '/login': (context) => LoginScreen(),
         '/signup': (context) => SignUpPage(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -11,6 +12,11 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
 
+  signIn() async {
+    await FirebaseAuth.instance
+        .signInWithEmailAndPassword(email: email.text, password: password.text);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,10 +28,6 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 70),
-              // Image.asset(
-              //   'images/loginSticker.png',
-              //   scale: 1.7,
-              // ),
               const Text(
                 "Welcome Back!",
                 style: TextStyle(
@@ -67,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    // signIn();
+                    signIn();
                   },
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,

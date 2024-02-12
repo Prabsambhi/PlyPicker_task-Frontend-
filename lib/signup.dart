@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:imagefrontend/wrapper.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -10,6 +12,15 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
+
+  signUp() async {
+    await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email.text, password: password.text);
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => Wrapper()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +80,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    // signUp();
+                    signUp();
                   },
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
