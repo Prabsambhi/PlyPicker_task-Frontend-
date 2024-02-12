@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:imagefrontend/imageprovider.dart';
+import 'package:imagefrontend/Provider/imageprovider.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {

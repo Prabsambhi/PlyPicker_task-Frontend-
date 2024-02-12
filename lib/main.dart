@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:imagefrontend/imageprovider.dart';
+import 'package:imagefrontend/Provider/imageprovider.dart';
 import 'package:imagefrontend/login.dart';
 import 'package:imagefrontend/savedimage.dart';
 import 'package:imagefrontend/signup.dart';

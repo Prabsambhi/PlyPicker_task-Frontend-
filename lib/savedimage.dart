@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imagefrontend/imageprovider.dart';
+import 'package:imagefrontend/Provider/imageprovider.dart';
 import 'package:provider/provider.dart';
 
 class SavedImagesScreen extends StatelessWidget {
