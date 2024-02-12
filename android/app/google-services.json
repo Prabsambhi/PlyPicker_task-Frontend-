@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1089177913876",
+    "project_id": "plypicketfrontend",
+    "storage_bucket": "plypicketfrontend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089177913876:android:48d4d2ba40f7aeec177501",
+        "android_client_info": {
+          "package_name": "com.example.imagefrontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvUppErSp0K-RRLMJPKFbHFDzzRirtdEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
